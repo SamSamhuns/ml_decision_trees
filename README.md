@@ -47,7 +47,7 @@ Decision trees using Entropy Impurity create slightly more balanced trees compar
 
 -   **CART**
 
-CART Loss function
+CART Loss function uses `Gini Impurity`
 
 ![](img/cart_loss.png)
 
@@ -58,6 +58,8 @@ G<sub>left/right</sub> is the Gini Impurity of the left/right subset
 m<sub>left/right</sub> is the number of instances in the left/right subset
 
 -   **ID3**
+
+ID3 uses `Entropy` measure and information gai
 
 ## Preprocessing Data
 
