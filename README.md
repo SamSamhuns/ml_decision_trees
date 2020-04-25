@@ -7,10 +7,10 @@ $ python -m venv venv
 $ pip install -r requirements.txt
 ```
 
-To start a new Jupyter Notebook kernel:
+To start a new Jupyter Notebook kernel based on the current virtualenv:
 
 ```shell
-$ ipython kernel install --name "local-venv" --user
+$ python -m ipykernel install --user --name ENV_NAME --display-name "ENV_DISPLAY_NAME"
 ```
 
 To list all kernels:
@@ -25,13 +25,13 @@ To remove a kernel:
 $ jupyter kernelspec uninstall unwanted-kernel
 ```
 
-## Decision Tress Backgroudn
+## Decision Tress Background
 
 ### Measures of Impurity
 
 -   **Gini Impurity**
 
-![](img/gini_impurity.png)
+<img src='img/gini_impurity.png' height='100' >
 
 Where p<sub>i,k</sub> is the ratio of class k instances among the training instances in the i<sup>th</sup> node.
 
@@ -39,7 +39,7 @@ Decision trees using Gini Impurity tend to isolate most frequent classes in thei
 
 -   **Entropy Impurity**
 
-![](img/entropy_impurity.png)
+<img src='img/entropy_impurity.png' width='550' >
 
 Decision trees using Entropy Impurity create slightly more balanced trees compared to those using Gini Impurity.
 
@@ -49,7 +49,7 @@ Decision trees using Entropy Impurity create slightly more balanced trees compar
 
 CART Loss function uses `Gini Impurity`
 
-![](img/cart_loss.png)
+<img src='img/cart_loss.png' width='600' >
 
 Where k = single feature, t<sub>k</sub> = threshold.
 
@@ -63,7 +63,7 @@ ID3 uses `Entropy` measure and `information gain`.
 
 The `Information Gain` is the difference in entropy before and after a set _S_ is split on an attribute _A_. Or, reduction of uncertainty in the set after splitting on attribute _A_.
 
-![](img/information_gain.png)
+<img src='img/information_gain.png' width='600' >
 
 ## Preprocessing Data
 
